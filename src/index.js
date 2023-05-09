@@ -5,13 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { RecoilRoot } from 'recoil';
+import { BrowserRouter } from 'react-router-dom';
 
 const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <QueryClientProvider client={queryClient}>
     <RecoilRoot>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </RecoilRoot>
   </QueryClientProvider>
 );
